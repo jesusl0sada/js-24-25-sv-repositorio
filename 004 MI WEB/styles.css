@@ -1,0 +1,135 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #e50914;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Controles */
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#controls select,
+#controls input,
+#controls button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#controls select {
+    background-color: #333;
+    color: #fff;
+}
+
+#controls input {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#controls button {
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#controls button:hover {
+    transform: scale(1.1);
+    background-color: #f40612;
+}
+
+/* Contenedor de películas */
+#movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Tarjeta de película */
+.movie-card {
+    position: relative;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover img {
+    opacity: 0.3;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card .movie-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #e50914;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-details {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
